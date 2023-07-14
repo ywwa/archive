@@ -1,0 +1,39 @@
+{% extends "skeleton.twig" %}
+
+{# USES #}
+{% use "components/navbar.twig" with navbar as Navbar %}
+{% use "components/modals.twig" with modals as Modals %}
+{% use "components/footer.twig" with footer as Footer %}
+
+
+{% block content %}
+    
+    {# NAVBAR #}
+    {% block navbar %}
+        {{ block("Navbar") }}
+    {% endblock %}
+
+    {# MAIN #}
+    <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center">
+        <div class="text-center">
+            <h1 class="font-monospace fw-bold mb-0">{{ title }}</h1>
+            <h5 class="fw-light mb-3 mt-0">{{ slug }}</h5>
+            <button class="btn btn-lg btn-outline-dark" type="button">Storage box</button>
+        </div>
+    </div>
+
+    {# MODALS #}
+    {% block modals %}
+        {{ block("Modals") }}
+    {% endblock %}
+
+    {# FOOTER #}
+    {% block footer %}
+        {{ block("Footer") }}
+    {% endblock %}
+{% endblock %}
+
+{# SCRIPTS #}
+{% block scripts %}
+    {{ assets({ files: [ 'assets/js/handleAuthForms.js' ] }) }}
+{% endblock scripts %}

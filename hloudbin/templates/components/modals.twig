@@ -1,0 +1,39 @@
+{% use "components/loginBlock.twig" with loginBlock as BlockLogin %}
+{% use "components/signupBlock.twig" with signupBlock as BlockSignup %}
+{% block modals %}
+    
+    <div class="modal fade" tabindex="-1" role="dialog" id="signupModal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content rounded-4 shadow">
+                <div class="modal-header border-bottom-0 ps-0 py-4">
+                    <h4 class="fw-bold text-center mb-0 position-absolute w-100">
+                        Sign up
+                    </h4>
+                </div>
+                <div class="modal-body pt-2">
+                    {% block signupBlock %}
+                        {{ block("BlockSignup") }}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="loginModal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content rounded-4 shadow">
+                <div class="modal-header border-bottom-0 ps-0 py-4">
+                    <h4 class="fw-bold text-center mb-0 position-absolute w-100">
+                        Sign in
+                    </h4>
+                </div>
+                <div class="modal-body pt-2">
+                    {% block loginBlock %}
+                        {{ block('BlockLogin') }}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
