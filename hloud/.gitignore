@@ -1,0 +1,36 @@
+
+###> symfony/framework-bundle ###
+/.env.local
+/composer.lock
+/symfony.lock
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
+
+###> symfony/phpunit-bridge ###
+.phpunit.result.cache
+/phpunit.xml
+###< symfony/phpunit-bridge ###
+
+###> symfony/webpack-encore-bundle ###
+/node_modules/
+/public/build/
+/public/uploads/*
+!/public/uploads/default_photo.png
+npm-debug.log
+yarn-error.log
+package-lock.json
+###< symfony/webpack-encore-bundle ###
+
+###> workspace ###
+/.vscode
+/.fleet

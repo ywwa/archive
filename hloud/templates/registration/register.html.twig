@@ -1,0 +1,113 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid d-flex justify-content-center align-items-center min-vh-100">
+            {{ form_start(registrationForm) }}
+
+                <div class="container w-75">
+                    <div class="row mb-3">
+                        <div class="col">
+                            <div class="form-floating">
+                                {{ form_widget(registrationForm.first_name) }}
+                                <label for="registration_form_first_name">
+                                    {% trans from 'messages' %}First name{% endtrans %}
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                {{ form_widget(registrationForm.last_name) }}
+                                <label for="registration_form_last_name">
+                                    {% trans from 'messages' %}Last name{% endtrans %}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <div class="form-floating">
+                                {{ form_widget(registrationForm.username) }}
+                                <label for="registration_form_username">
+                                    {% trans from 'messages' %}Username{% endtrans %}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <div class="form-floating">
+                                {{ form_widget(registrationForm.email) }}
+                                <label for="registration_form_email">
+                                    {% trans from 'messages' %}Email{% endtrans %}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <div class="form-floating">
+                                {{ form_widget(registrationForm.plainPassword.first) }}
+                                <label for="registration_form_plainPassword.first">
+                                    {% trans from 'messages' %}Password{% endtrans %}
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                {{ form_widget(registrationForm.plainPassword.second) }}
+                                <label for="registration_form_plainPassword.second">
+                                    {% trans from 'messages' %}Repeat password{% endtrans %}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-center">
+                            {{ form_widget(registrationForm.agreeTerms) }}
+                            <label for="registration_form_agreeTerms">
+                                {% trans from 'messages' %}By signing up you agree to Terms of service{% endtrans %}
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col text-center text-muted">
+                            <small>
+                                {% trans from 'messages' %}Already a member?{% endtrans %}
+                                <a href="{{ url('app_login') }}"
+                                    class="link text-decoration-none"
+                                    role="link"
+                                >
+                                    {% trans from 'messages' %}Sign in{% endtrans %}
+                                </a>
+                            </small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-center">
+                            <button type="submit" class="btn btn-lg btn-outline-dark mx px-5">
+                                {% trans from 'messages' %}Register{% endtrans %}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            {{ form_end(registrationForm) }}
+    </div>
+
+
+
+    {# <h1>Register</h1>
+
+    {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.username) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+        }) }}
+        {{ form_row(registrationForm.agreeTerms) }}
+
+        <button type="submit" class="btn">Register</button>
+    {{ form_end(registrationForm) }} #}
+{% endblock %}
