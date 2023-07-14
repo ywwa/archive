@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head> 
+		<meta charset="UTF-8">
+		<!-- mobile unfriendly! -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="src/css/style.css">
+		<title>yuukilla.me</title>
+	</head>
+
+	<body>
+		<!-- this "code" fucking sucks -->
+		<div class="terminal-box">
+			<div class="term-input">
+				<p>Enter command</p>
+				<p class="term-input-prefix">><input id="input-source" type="command" placeholder='command list: "help"'></p>
+			</div>
+		</div>
+
+		<div id="help">
+			<p>> help</p>
+			<ul>
+				<li>help -> <code>displays this menu</code></li>
+				<li>links -> <code>dispalys links to socials</code></li>
+				<li>repos -> <code>display github repos</code></li>
+			</ul>
+		</div>
+		
+		<div id="links"> 
+			<p>> links</p>
+			<ul>
+				<li><a href="https://github.com/yuukilla">github.url</a></li>
+				<li><a href="https://vk.com/yuukilla">vkontakte.url</a></li>
+				<li><a href="https://t.me/yuukilla" target="popup">telegram.url</a></li>
+			</ul>
+		</div>
+
+		<div id="repos">
+			<p>> repos</p>
+			<ul>
+				<li><a href="https://github.com/yuukilla/ranger-gitplug">ranger-gitplug</a></li>
+				<li><a href="https://github.com/yuukilla/fish-theme">fish-theme</a></li>
+			</ul>
+		</div>
+
+		<div id="oneKminusseven">
+			<p id="minusSEVEN"></p>
+		</div>
+
+	<script src="src/js/terminal.js" async></script>
+	</body>
+</html>
